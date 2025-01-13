@@ -14,6 +14,29 @@ The focus of the paper is on demonstrating the effectiveness of their three-stag
   <img src="https://raw.githubusercontent.com/RezuwanHassan262/Universal-Language-Model-Fine-tuning-for-Text-Classification-Implementation/main/images/tt_curve.png" alt="Four stages of finetuning train-valid curve">
 </div>
 
+The training parameter of the third stage and the training progress and metrics.
+
+    Suggested learning rate (slide): 0.0006918309954926372
+    Suggested learning rate (valley): 3.630780702224001e-05
+    Average learning rate: 0.0003640694012574386
+    Suggested ALR: 0.36e-3
+
+`learner.fit_one_cycle(n_epoch = 100, lr_max = slice(lr_min, lr_steep), cbs=EarlyStoppingCallback(monitor='accuracy', min_delta=0.1, patience=10)) #Takign the average of suggested slide and valley`
+
+| Epoch | Train Loss | Valid Loss | Accuracy | Perplexity | Time |
+|---|---|---|---|---|---|
+| 0 | 0.532324 | 0.502562 | 0.857191 | 1.652951 | 00:27 |
+| 1 | 0.549340 | 0.494193 | 0.859543 | 1.639174 | 00:28 |
+| 2 | 0.543409 | 0.494593 | 0.862567 | 1.639831 | 00:28 |
+| 3 | 0.564304 | 0.492928 | 0.860887 | 1.637103 | 00:29 |
+| 4 | 0.537835 | 0.489772 | 0.861559 | 1.631944 | 00:28 |
+| 5 | 0.496488 | 0.493346 | 0.859879 | 1.637787 | 00:28 |
+| 6 | 0.526380 | 0.492810 | 0.859543 | 1.636909 | 00:28 |
+| 7 | 0.514410 | 0.487982 | 0.861223 | 1.629026 | 00:28 |
+| 8 | 0.536183 | 0.489782 | 0.862231 | 1.631960 | 00:28 |
+| 9 | 0.475815 | 0.488019 | 0.862231 | 1.629086 | 00:29 |
+| 10 | 0.464559 | 0.489713 | 0.859543 | 1.631849 | 00:27 |
+|  | No improvement since epoch 6: early stopping |  |  |  |  |
 
 To conclude, The ULMFiT paper revolutionized NLP by showing that pre-trained language models could be fine-tuned for a variety of downstream tasks with minimal labeled data. Its key innovations include the introduction of transfer learning techniques tailored for text, such as discriminative fine-tuning, slanted triangular learning rates, and staged training. The method not only outperformed traditional approaches but also demonstrated the universal applicability of pre-trained LMs, laying the foundation for subsequent advancements in NLP, such as BERT and GPT.
 

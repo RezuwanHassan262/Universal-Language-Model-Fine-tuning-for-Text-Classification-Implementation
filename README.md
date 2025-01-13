@@ -2,7 +2,7 @@
 
 This project is a reproduction of the ["Universal Language Model Fine-tuning for Text Classification"](https://arxiv.org/abs/1801.06146) paper. The paper demonstrates that transfer learning (pre-training a language model on a large corpus and fine-tuning it for specific tasks) can be as effective in NLP as it has been in computer vision.
 
-The data was scraped from the ["Rotten Tomato"](https://www.rottentomatoes.com/) website that can be found [here.](https://github.com/RezuwanHassan262/Universal-Language-Model-Fine-tuning-for-Text-Classification-Implementation/blob/main/data/film_details.csv)
+The data was scraped from the ["Rotten Tomato"](https://www.rottentomatoes.com/) website and is available [here.](https://github.com/RezuwanHassan262/Universal-Language-Model-Fine-tuning-for-Text-Classification-Implementation/blob/main/data/film_details.csv)
 
 Finally utilized Fast.AI's `text_classifier_learner` function and did discriminative supervised finetuned the ["Regularizing and Optimizing LSTM Language Models"](https://arxiv.org/abs/1708.02182) paper inspired  `AWD_LSTM` language model (Pre-trained LSTM model on Wikipedia Corpus) to classify text labels or genres. 
 
